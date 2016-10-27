@@ -1,0 +1,18 @@
+<md-toolbar color="primary">
+      <span>Person Register</span>
+</md-toolbar>
+<md-card>
+      <md-toolbar class="toolbar">
+            <button md-fab color="primary" (click)="gotoHome()" title="Home Page">
+                  <md-icon class="md-24">home</md-icon>
+            </button>
+            <button md-fab color="primary" (click)="gotoList()" title="List Person">
+                  <md-icon class="md-24">list</md-icon>
+            </button>
+      </md-toolbar>
+      <br />
+      <md-input placeholder="First name" [(ngModel)]="person.firstName" style="width: 100%"></md-input>
+      <md-input placeholder="Last name" [(ngModel)]="person.lastName" style="width: 100%"></md-input>
+      <md-input placeholder="Email" [(ngModel)]="person.email" style="width: 100%"></md-input>
+      <button md-raised-button color="primary" (click)="save()">save</button>
+</md-card>

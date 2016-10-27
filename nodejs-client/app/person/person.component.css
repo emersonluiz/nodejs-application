@@ -1,0 +1,25 @@
+md-list, md-nav-list {
+   border: 1px solid rgba(0, 0, 0, 0.12);
+   margin: 20px 20px 0 0;
+}
+
+md-divider {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.md-nav-list {
+    margin-right: 0px;
+}
+
+.md-nav-list h4 {
+    margin-left: 30px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+md-toolbar button {
+    margin: 8px;
+}
+
+.toolbar {
+    background-color: #f7f7f7;
+}

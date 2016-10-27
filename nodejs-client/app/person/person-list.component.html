@@ -1,0 +1,27 @@
+<md-toolbar color="primary">
+      <span>Person List</span>
+</md-toolbar>
+ <md-card>
+    <md-toolbar class="toolbar">
+        <button md-fab color="primary" (click)="gotoHome()" title="Home Page">
+            <md-icon class="md-24">home</md-icon>
+        </button>
+        <button md-fab color="primary" (click)="gotoRegister()" title="New Person">
+            <md-icon class="md-24">add</md-icon>
+        </button>
+    </md-toolbar>
+    <md-nav-list class="md-nav-list" role="list">
+        <h4>Person Name</h4>
+        <md-list-item class="md-list-item" role="listitem" *ngFor="let item of persons">
+            <div class="md-list-text">
+                {{item.firstName}} {{item.lastName}}
+            </div>
+            <button md-icon-button color="primary" (click)="gotoView(item.id)" title="View Person">
+                <md-icon class="md-24">visibility</md-icon>
+            </button>
+        </md-list-item>
+
+        <!--<md-divider class="md-divider"></md-divider>-->
+
+    </md-nav-list>
+ </md-card>

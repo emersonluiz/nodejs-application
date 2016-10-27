@@ -1,0 +1,11 @@
+/*/node_modules
+/*/typings
+
+nodejs-client/app/*.js
+nodejs-client/app/*/*.js
+nodejs-client/app/*.map
+nodejs-client/app/*/*.map
+
+/nodejs-api/nodeAPI.sqlite
+
+npm-debug.log
