@@ -8,7 +8,7 @@ import { PersonService } from './person.service';
     templateUrl: 'app/person/person-view.component.html',
     styleUrls: ['app/person/person.component.css']
 })
-export class PersonViewComponent {
+export class PersonViewComponent implements OnInit {
 
     private person: any;
 

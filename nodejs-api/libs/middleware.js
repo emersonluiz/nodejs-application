@@ -6,6 +6,9 @@ module.exports = app => {
     app.use(bodyParser.json());
     app.use((req, res, next) => {
         delete req.body.id;
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE,OPTIONS');
+        res.header("Access-Control-Allow-Headers", "Content-Type, Origin, X-Requested-With, Accept, Lang, Authorization");
         next();
     });
 };

@@ -35,4 +35,11 @@ export class PersonListComponent {
         )
     }
 
+    public delete(id: string) {
+        this.personService.delete(id).subscribe(
+            () => this.list(),
+            error => console.log("error")
+        )
+    }
+
 }

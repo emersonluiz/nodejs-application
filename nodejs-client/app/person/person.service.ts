@@ -33,6 +33,12 @@ export class PersonService {
                         .catch(this.handleError)
     }
 
+    delete(id: string): any {
+        return this.httpService.delete(this.personUrl + '/persons/' + id)
+                        .map(this.extractData)
+                        .catch(this.handleError)
+    }
+
     private extractData(res: Response) {
         if (res.status < 200 || res.status >= 300) {
           console.log(res.status);
