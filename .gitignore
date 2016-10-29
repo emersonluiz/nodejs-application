@@ -5,6 +5,7 @@ nodejs-client/app/*.js
 nodejs-client/app/*/*.js
 nodejs-client/app/*.map
 nodejs-client/app/*/*.map
+nodejs-client/dist
 
 /nodejs-api/nodeAPI.sqlite
 

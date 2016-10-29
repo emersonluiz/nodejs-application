@@ -11,8 +11,14 @@
             </button>
       </md-toolbar>
       <br />
-      <md-input placeholder="First name" [(ngModel)]="person.firstName" style="width: 100%"></md-input>
-      <md-input placeholder="Last name" [(ngModel)]="person.lastName" style="width: 100%"></md-input>
-      <md-input placeholder="Email" [(ngModel)]="person.email" style="width: 100%"></md-input>
-      <button md-raised-button color="primary" (click)="save()">save</button>
+      <md-input required placeholder="First name" [(ngModel)]="person.firstName" style="width: 100%">
+            <md-hint *ngIf="!person.firstName">First name is required</md-hint>
+      </md-input>
+      <md-input required placeholder="Last name" [(ngModel)]="person.lastName" style="width: 100%">
+            <md-hint *ngIf="!person.lastName">Last name is required</md-hint>
+      </md-input>
+      <md-input required placeholder="Email" [(ngModel)]="person.email" style="width: 100%">
+            <md-hint *ngIf="!person.email">Email is required</md-hint>
+      </md-input>
+      <button md-raised-button color="primary" [disabled]="!person.firstName || !person.lastName || !person.email" (click)="save()">save</button>
 </md-card>

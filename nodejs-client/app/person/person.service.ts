@@ -33,6 +33,12 @@ export class PersonService {
                         .catch(this.handleError)
     }
 
+    put(person: any): any {
+        return this.httpService.put(this.personUrl + '/persons/' + person.id, JSON.stringify(person))
+                        .map(this.extractData)
+                        .catch(this.handleError)
+    }
+
     delete(id: string): any {
         return this.httpService.delete(this.personUrl + '/persons/' + id)
                         .map(this.extractData)

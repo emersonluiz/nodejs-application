@@ -21,11 +21,15 @@ export class PersonListComponent {
     }
 
     public gotoView(id: string) {
-        this.router.navigate(["/persons/"+id]);
+        this.router.navigate(["/persons", id, "view"]);
+    }
+
+    public gotoEdit(id: string) {
+        this.router.navigate(["/persons", id, "edit"]);
     }
 
     public gotoRegister() {
-        this.router.navigate(["/persons-register"]);
+        this.router.navigate(["/persons", "new"]);
     }
 
     public list(){

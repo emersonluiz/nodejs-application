@@ -12,7 +12,6 @@ import { PersonListComponent } from './person/person-list.component'
 import { PersonRegisterComponent } from './person/person-register.component'
 import { PersonViewComponent } from './person/person-view.component'
 
-import { ToolbarComponent } from './structure/toolbar.component'
 import { HomeComponent } from './home/home.component'
 import { routing } from './app.routes'
 
@@ -22,7 +21,7 @@ import { PersonService } from './person/person.service'
 
 @NgModule({
   imports:      [ BrowserModule, routing, HttpModule, FormsModule, MaterialModule.forRoot() ],
-  declarations: [ AppComponent, ToolbarComponent, HomeComponent, PersonListComponent, PersonRegisterComponent, PersonViewComponent ],
+  declarations: [ AppComponent, HomeComponent, PersonListComponent, PersonRegisterComponent, PersonViewComponent ],
   bootstrap:    [ AppComponent ],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}, ConfigService, HttpService, PersonService]
 })

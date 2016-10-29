@@ -31,6 +31,10 @@ export class PersonViewComponent implements OnInit {
         this.router.navigate(["/persons"]);
     }
 
+    public gotoEdit() {
+        this.router.navigate(["/persons", this.person.id, "edit"]);
+    }
+
     public get(id: string){
       this.personService.get(id).subscribe(
             ret => this.person = ret,

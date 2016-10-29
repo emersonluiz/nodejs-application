@@ -1,11 +1,10 @@
 import {Http, Headers} from '@angular/http';
 import {Injectable} from '@angular/core';
-import {ConfigService} from '../config/config.service';
 
 @Injectable()
 export class HttpService {
 
-  constructor(private http: Http, private config:ConfigService) { }
+  constructor(private http: Http) { }
 
   get(url:string) {
     let headers = new Headers()
