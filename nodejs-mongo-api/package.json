@@ -4,7 +4,8 @@
   "description": "API para teste do nodeJS",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "npm run apidoc && babel-node index.js",
+    "apidoc": "apidoc -i routes/ -o public/apidoc"
   },
   "author": "Emerson Luiz de Castro",
   "license": "ISC",
@@ -14,8 +15,10 @@
     "body-parser": "^1.15.2",
     "consign": "^0.1.2",
     "express": "^4.14.0",
-    "sequelize": "^3.24.5",
-    "sqlite3": "^3.1.6"
+    "mongoose": "^4.6.5",
+    "sequelize": "^3.24.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "apidoc": "^0.16.1"
+  }
 }

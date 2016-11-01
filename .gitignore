@@ -7,6 +7,9 @@ nodejs-client/app/*.map
 nodejs-client/app/*/*.map
 nodejs-client/dist
 
-/nodejs-api/nodeAPI.sqlite
+/nodejs-sqlite-api/nodeAPI.sqlite
+/nodejs-sqlite-api/public
+
+/nodejs-mongo-api/public
 
 npm-debug.log
