@@ -78,16 +78,15 @@ module.exports = app => {
          *      "lastName": "Eistein",
          *      "email": "test@test.com"
          *  }
-         * @apiError (Error 404/500) {Object} error Object with error message
+         * @apiError (Error 500) {Object} error Object with error message
          * @apiErrorExample {json} Error
-         * HTTP/1.1 404 Not Found / 500 Internal Server Error
+         * HTTP/1.1 500 Internal Server Error
          * {"msg": "error message"}
          */
         .get((req, res) => {
-            BD.find({_id: req.params.id}, (error, persons) => {
+            BD.findOne({_id: req.params.id}, (error, persons) => {
                 if (error) return res.status(500).json({msg: error.message});
-                if (persons.length == 0) return res.status(404).json({msg: "Person not found"});
-                return res.json(persons[0]);
+                return res.json(persons);
             })
         })
 
